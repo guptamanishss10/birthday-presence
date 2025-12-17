@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#f093fb">
+  <title>Special Surprise 💖</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body class="step-1">
+  <div class="bg-decor">
+    <span>🎂</span>
+    <span>✨</span>
+    <span>💝</span>
+    <span>🎁</span>
+  </div>
+
+  <main class="app">
+    <section class="step active" data-step="1">
+      <div class="card intro-card animate-in">
+        <h1 id="introHeading" class="typing-heading"></h1>
+        <button class="primary-btn" id="btnOpenSurprise" aria-label="Tap to Open">
+          Tap to Open 🎁
+        </button>
+      </div>
+    </section>
+
+    <section class="step" data-step="2">
+      <div class="card envelope-card animate-in">
+        <h2>Your Special Letter 💌</h2>
+        <div class="envelope-wrapper">
+          <div class="envelope bounce" id="envelope" role="button" tabindex="0" aria-label="Open envelope">
+            <div class="envelope-back"></div>
+            <div class="envelope-front"></div>
+            <div class="envelope-flap"></div>
+            <div class="envelope-letter">
+              <span>💌</span>
+            </div>
+          </div>
+        </div>
+        <p class="helper-text">Tap the envelope to open</p>
+      </div>
+    </section>
+
+    <section class="step" data-step="3">
+      <div class="card letter-card animate-in">
+        <h2>A Message for You 💌</h2>
+        <div class="letter-content">
+          <div class="letter-body">
+            <p class="letter-greeting">My Dearest,</p>
+            <p class="letter-text" id="letterText"></p>
+            <p class="letter-signature">With all my love 💖</p>
+          </div>
+        </div>
+        <button class="primary-btn" id="btnCutCake" aria-label="Cut the Cake">
+          Cut the Cake 🎂
+        </button>
+      </div>
+    </section>
+
+    <section class="step" data-step="4">
+      <div class="card cake-card animate-in">
+        <h2>Time to Cut the Cake! 🍰</h2>
+        <div class="cake-container">
+          <div class="cake-wrapper" id="cakeWrapper">
+            <div class="cake-image" id="cakeImage">
+              <div class="cake-layer cake-bottom"></div>
+              <div class="cake-layer cake-middle"></div>
+              <div class="cake-layer cake-top"></div>
+              <div class="cake-candle">🕯️</div>
+            </div>
+            <div class="cut-line" id="cutLine"></div>
+            <div class="cut-handle" id="cutHandle" role="button" tabindex="0" aria-label="Drag to cut cake">
+              ✂️
+            </div>
+          </div>
+          <p class="cake-message" id="cakeMessage">Drag the handle across the cake to cut it</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="step" data-step="5">
+      <div class="card share-card animate-in">
+        <h2>Share the Love 💖</h2>
+        <p class="share-text">
+          I hope this surprise made you smile!<br>
+          Share it with someone special or keep it for yourself.<br>
+          You deserve all the happiness in the world! ✨
+        </p>
+        <div class="share-buttons">
+          <a href="#" class="share-btn whatsapp-btn" id="btnWhatsApp" aria-label="Share on WhatsApp">
+            Share on WhatsApp 💬
+          </a>
+          <button class="share-btn instagram-btn" id="btnInstagram" aria-label="Share on Instagram">
+            Share on Instagram 📸
+          </button>
+          <button class="share-btn replay-btn" id="btnReplay" aria-label="Replay Experience">
+            Replay 🔁
+          </button>
+        </div>
+        <p class="instagram-help" id="instagramHelp" style="display: none;">
+          Link copied! Paste it in Instagram DM or Story 💖
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <div class="toast" id="toast"></div>
+
+  <audio id="bgMusic" loop preload="auto">
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
